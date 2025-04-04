@@ -1,0 +1,136 @@
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Notes Heading */
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+/* Text Area */
+textarea {
+    width: 40%;
+    height: 200px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    font-size: 18px;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    resize: none;
+    transition: 0.3s;
+}
+
+textarea:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Buttons */
+button {
+    padding: 12px 22px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+    margin-right: 8px;
+}
+
+button:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+}
+
+/* Notes Container */
+#notesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Note Card */
+.note {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 220px;
+    transition: transform 0.2s ease-in-out;
+    word-wrap: break-word;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.note:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Delete Button */
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+.note small {
+    color: #555;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    textarea {
+        width: 80%;
+        height: 150px;
+    }
+
+    .note {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    textarea {
+        width: 90%;
+        height: 140px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+}
